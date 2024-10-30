@@ -1,3 +1,4 @@
+// when site loads, play the animation
 document.addEventListener('DOMContentLoaded', function () {
 	const logo = document.querySelector('.logo-img');
 	const title = document.querySelector('.chakra');
@@ -5,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// logo fades in
 	logo.style.animationDelay = '0.5s';
 
-	// Split the title text into individual letters
+	// split the title text into individual letters
 	title.innerHTML = title.textContent
 		.split('')
 		.map((letter, index) => {

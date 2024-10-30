@@ -8,10 +8,23 @@
 	box-sizing: border-box;
 }
 
-body {
-	background-color: #ffb703;
+/* full-screen overlay container */
+.overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+      linear-gradient(rgba(255, 183, 3, 0.5), rgba(255, 183, 3, 0.5)), /* overlay */
+      url('../images/ingredient-bg.jpg'); /* main image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; /* places it behind other content */
 }
 
+/* font class */
 .chakra {
   font-family: var(--font-chakra);
 }
@@ -59,3 +72,65 @@ h1 {
   opacity: 0;
   animation: fadeIn 0.2s ease forwards;
 }
+
+.actions {
+  display: grid;
+  gap: 0; /* space between cards */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive column setup */
+  padding: 0 10%;
+}
+
+.card {
+	background-color: #ffe5d9;
+	width: 16rem;
+	height: 16rem;
+  margin: 0 auto;
+  margin-bottom: 5%;
+	border-radius: 20px;
+	border: 3px solid black;
+	box-shadow: 5px 5px black;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+h2 {
+	font-size: 1.6rem;
+	font-family: var(--font-chakra);
+	font-weight: 700;
+	font-style: normal;
+}
+
+.card-text {
+	font-size: 1.2rem;
+	font-family: var(--font-chakra);
+	font-weight: 400;
+	font-style: normal;
+  margin: 1rem;
+}
+
+.card-btn {
+	width: 60%;
+	height: 50px;
+	border-radius: 8px;
+	border: 3px solid black;
+	box-shadow: 3px 3px black;
+	background-color: #fb8500;
+	color: white;
+	font-size: 1.2rem;
+	font-family: var(--font-chakra);
+	font-weight: 500;
+	font-style: normal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.card-btn:hover {
+	box-shadow: 1px 1px black;
+	transform: translateY(2px);
+}
+
